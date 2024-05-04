@@ -2,10 +2,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:konouz_harraz/screens/auth/auth_screen.dart';
+import 'package:sizer/sizer.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
-  static String routeName = "/onBoardingScreen";
+  static String routeName = "/SplashScreen";
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -15,9 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // Delay navigation to home screen
     Timer(Duration(seconds: 3), () {
-      Get.to();
+      Get.to(() => AuthScreen());
     });
   }
 
